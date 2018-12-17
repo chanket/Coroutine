@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7d2a36ac-daba-4653-8144-955b9a8f5ec4}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>CoroutineLinux</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Context.h" />
+    <ClInclude Include="Context\ContextStruct.h" />
+    <ClInclude Include="Context\GetStackBase.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Context\Assembly\x64-gcc.s">
+      <FileType>Document</FileType>
+      <RemoteCopyFile Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+      </RemoteCopyFile>
+      <RemoteCopyFile Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+      </RemoteCopyFile>
+      <RemoteCopyFile Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </RemoteCopyFile>
+      <RemoteCopyFile Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </RemoteCopyFile>
+      <RemoteCopyFile Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+      </RemoteCopyFile>
+      <RemoteCopyFile Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+      </RemoteCopyFile>
+      <RemoteCopyFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </RemoteCopyFile>
+      <RemoteCopyFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </RemoteCopyFile>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+    </None>
+    <None Include="Context\Assembly\x86-gcc.s" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <RemotePreLinkEvent>
+      <Command>$(ToolExe) -c Context/Assembly/$(PlatformTarget)-gcc.s -o obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o</Command>
+    </RemotePreLinkEvent>
+    <Link>
+      <LibraryDependencies>pthread;</LibraryDependencies>
+      <AdditionalDependencies>$(RemoteProjectDir)/obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <RemotePreLinkEvent>
+      <Command>$(ToolExe) -c Context/Assembly/$(PlatformTarget)-gcc.s -o obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o</Command>
+    </RemotePreLinkEvent>
+    <Link>
+      <LibraryDependencies>pthread;</LibraryDependencies>
+      <AdditionalDependencies>$(RemoteProjectDir)/obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <RemotePreLinkEvent>
+      <Command>$(ToolExe) -c Context/Assembly/$(PlatformTarget)-gcc.s -o obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o</Command>
+    </RemotePreLinkEvent>
+    <Link>
+      <LibraryDependencies>pthread;</LibraryDependencies>
+      <AdditionalDependencies>$(RemoteProjectDir)/obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <RemotePreLinkEvent>
+      <Command>$(ToolExe) -c Context/Assembly/$(PlatformTarget)-gcc.s -o obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o</Command>
+    </RemotePreLinkEvent>
+    <Link>
+      <LibraryDependencies>pthread;</LibraryDependencies>
+      <AdditionalDependencies>$(RemoteProjectDir)/obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <RemotePreLinkEvent>
+      <Command>$(ToolExe) -c Context/Assembly/$(PlatformTarget)-gcc.s -o obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o</Command>
+    </RemotePreLinkEvent>
+    <Link>
+      <LibraryDependencies>pthread;</LibraryDependencies>
+      <AdditionalDependencies>$(RemoteProjectDir)/obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <RemotePreLinkEvent>
+      <Command>$(ToolExe) -c Context/Assembly/$(PlatformTarget)-gcc.s -o obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o</Command>
+    </RemotePreLinkEvent>
+    <Link>
+      <LibraryDependencies>pthread;</LibraryDependencies>
+      <AdditionalDependencies>$(RemoteProjectDir)/obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <RemotePreLinkEvent>
+      <Command>$(ToolExe) -c Context/Assembly/$(PlatformTarget)-gcc.s -o obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o</Command>
+    </RemotePreLinkEvent>
+    <Link>
+      <LibraryDependencies>pthread;</LibraryDependencies>
+      <AdditionalDependencies>$(RemoteProjectDir)/obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <RemotePreLinkEvent>
+      <Command>$(ToolExe) -c Context/Assembly/$(PlatformTarget)-gcc.s -o obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o</Command>
+    </RemotePreLinkEvent>
+    <Link>
+      <LibraryDependencies>pthread;</LibraryDependencies>
+      <AdditionalDependencies>$(RemoteProjectDir)/obj/$(PlatformTarget)/$(Configuration)/$(PlatformTarget)-gcc.o;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

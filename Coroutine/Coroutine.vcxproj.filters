@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Context">
+      <UniqueIdentifier>{363fb96c-f27a-43a9-9c4c-ab3670dabdad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Context\Assembly">
+      <UniqueIdentifier>{f4c6694b-22f7-40f1-94a6-e5cf8d3b7bc5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Context.h" />
+    <ClInclude Include="Context\ContextStruct.h">
+      <Filter>Context</Filter>
+    </ClInclude>
+    <ClInclude Include="Context\GetStackBase.h">
+      <Filter>Context</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Context\Assembly\x86-masm.asm">
+      <Filter>Context\Assembly</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Context\Assembly\x64-masm.asm">
+      <Filter>Context\Assembly</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
